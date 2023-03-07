@@ -1,0 +1,93 @@
+/* Basic functions and basic declarations*/
+body{
+    margin: 0;
+    background-color: #ffe09e;
+    color: white;
+    font-size: 50px;
+    font-family: 'Tilt Warp';
+}
+.slowest{
+    animation-delay: 3s;
+}
+.slow{
+    animation-delay: 2.5s;
+}
+.fast{
+    animation-delay: 2s;
+}
+.fastest{
+    animation-delay: 1.5s;
+}
+
+/* Animations */
+@keyframes growLtoR {
+    0%{
+        transform: translateX(-1980px);
+    }
+    
+    50%{
+        transform: translateX(-450px);
+    }
+    100%{
+        transform: translate(-1980px);
+    }
+}
+
+/* Use this if you have a static image for loading or any other component */
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation functions */
+.rotate {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.growLtoR {
+    animation-name: growLtoR;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+/* functions */
+.loading{
+    position: absolute;
+    top: 320px;
+    left: 600px;
+    margin: 20px;
+}
+
+.image{
+    position:absolute;
+    top: -5px;
+    left: 195px;
+}
+
+/* Movable bar stuff */
+.rect{
+    position: relative;
+    background-color: #F7C04A;
+    width: 1980px;
+    float: left;
+    height: 200px;
+}
+
+.circ{
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 1880px;
+    background-color: #F7C04A;
+}
